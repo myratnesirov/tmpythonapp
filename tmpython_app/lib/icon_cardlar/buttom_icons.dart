@@ -16,7 +16,7 @@ class ButtomIcon extends StatelessWidget {
           onTap: onPress,
           child: Icon(
             icon,
-            size: 25,
+            size: 37,
             color: color,
           ),
         ),

@@ -1,22 +1,30 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class K0 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Duşman vs Oýunçy',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        reverse: false,
-        padding: EdgeInsets.only(right: 10, left: 10),
-        children: <Widget>[
-          Text(
-            '''
+class Todo {
+  final String title;
+  final String description;
+
+  Todo(this.title, this.description);
+}
+
+class Kod extends StatelessWidget {
+  final List<String> at = <String>[
+    '1 Duşman vs Oýunçy',
+    '2 Hereketli Ýazgy',
+    '3 Kalkulýator Ýazmak',
+    '4 Kafe Kassa',
+    '5 Kitaphana',
+    '6 Kontakt',
+    '7 Funksiýa args',
+    '8 Class I',
+    '9 Sapaklaryň Ýetişigi',
+    '10 Hasaplama Ulgamy',
+    '11 Funksiýanyň Grafigi',
+  ];
+
+  final List<String> kody = <String>[
+    '''
 import random, os
 
 class Dusman():
@@ -71,31 +79,7 @@ while True:
         uran = dusmanlar[random.randint(0, len(dusmanlar)-1)]
         uran.ur(oyuncy)
           ''',
-            style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class K1 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Hereketli Ýazgy',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        reverse: false,
-        padding: EdgeInsets.only(right: 10, left: 10),
-        children: <Widget>[
-          Text(
-            '''
+    '''
   from tkinter import *
   
   r = Tk()
@@ -124,31 +108,7 @@ class K1 extends StatelessWidget {
   
   r.mainloop()
           ''',
-            style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class K2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Hereketli Ýazgy',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        reverse: false,
-        padding: EdgeInsets.only(right: 10, left: 10),
-        children: <Widget>[
-          Text(
-            '''
+    '''
 from tkinter import *
 
 t = Tk()
@@ -248,31 +208,7 @@ button_bolmek.grid(row=4, column=3)
 
 mainloop()
           ''',
-            style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class K3 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Kafe Kassa',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        reverse: false,
-        padding: EdgeInsets.only(right: 10, left: 10),
-        children: <Widget>[
-          Text(
-            '''
+    '''
 yerler = dict()
 
 for i in range(10):
@@ -367,31 +303,7 @@ def main():
             input()
 main()
           ''',
-            style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class K4 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Kitaphana',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        reverse: false,
-        padding: EdgeInsets.only(right: 10, left: 10),
-        children: <Widget>[
-          Text(
-            '''
+    '''
 kitaphana = list()
 menu = """
 
@@ -441,31 +353,7 @@ while True:
         print("Press Enter for menu")
         input()
           ''',
-            style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class K5 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Kontakt',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        reverse: false,
-        padding: EdgeInsets.only(right: 10, left: 10),
-        children: <Widget>[
-          Text(
-            '''
+    '''
 contact = {
     "Annadurdy":{
         "Oy adresi":"6, Zaybal boldum koce, Biderek obasy, Dashoguz Welayat",
@@ -505,31 +393,7 @@ while True:
         print("Yalnys girdiniz tazeden synap gorun: ")
         input()
           ''',
-            style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class K6 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Funksiýa args',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        reverse: false,
-        padding: EdgeInsets.only(right: 10, left: 10),
-        children: <Widget>[
-          Text(
-            '''
+    '''
 def f(*args):
     jem = 0
     for i in args:
@@ -537,31 +401,7 @@ def f(*args):
     return jem
 print(f(2,3,4,5,6,7))
           ''',
-            style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class K7 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Class I',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        reverse: false,
-        padding: EdgeInsets.only(right: 10, left: 10),
-        children: <Widget>[
-          Text(
-            '''
+    '''
 class Player():
     def __init__(self,at,guyc):
         self.name = at
@@ -572,31 +412,7 @@ Myrat = Player("Myrat",90)
 Myrat.namechange("Maksat")
 print(Myrat.at)
           ''',
-            style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class K8 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Sapaklaryň Ýetişigi',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        reverse: false,
-        padding: EdgeInsets.only(right: 10, left: 10),
-        children: <Widget>[
-          Text(
-            '''
+    '''
 from tkinter import *
 from tkinter import ttk
 
@@ -675,31 +491,7 @@ btyetisik.place(x=530, y=400)
 
 r.mainloop()
           ''',
-            style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class K9 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Hasaplama Ulgamy',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        reverse: false,
-        padding: EdgeInsets.only(right: 10, left: 10),
-        children: <Widget>[
-          Text(
-            '''
+    '''
 from tkinter import *
 from tkinter import ttk
 
@@ -832,31 +624,7 @@ btocur.place(x=280, y=520)
 
 r.mainloop()
           ''',
-            style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class K10 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Funksiýanyň Grafigi',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        reverse: false,
-        padding: EdgeInsets.only(right: 10, left: 10),
-        children: <Widget>[
-          Text(
-            '''
+    '''
 import tkinter
 from numpy import arange, sin, cos, square, sqrt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
@@ -877,10 +645,98 @@ toolbar = NavigationToolbar2Tk(canvas, r)
 toolbar.update()
 
 r.mainloop()
-          ''',
-            style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
-          ),
-        ],
+          '''
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Color(0xFF0A0E21),
+        scaffoldBackgroundColor: Color(0xFF0A0E21),
+      ),
+      title: 'Türkmençe Python',
+      home: TodosScreen(
+          todos: List.generate(11, (index) => Todo(at[index], kody[index]))),
+    );
+  }
+}
+
+class TodosScreen extends StatelessWidget {
+  final List<Todo> todos;
+
+  TodosScreen({Key key, @required this.todos}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: Text('VIDEO SAPAKLAR'),
+        ),
+      ),
+      body: ListView.builder(
+        itemCount: todos.length,
+        itemBuilder: (context, index) {
+          return Card(
+            color: Colors.blueGrey[800],
+            child: ListTile(
+              leading: Icon(
+                Icons.code,
+                color: Colors.white,
+              ),
+              title: Text(
+                todos[index].title,
+                style: TextStyle(color: Colors.white, fontSize: 25),
+              ),
+              // When a user taps the ListTile, navigate to the DetailScreen.
+              // Notice that you're not only creating a DetailScreen, you're
+              // also passing the current todo through to it.
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailScreen(),
+                    // Pass the arguments as part of the RouteSettings. The
+                    // DetailScreen reads the arguments from these settings.
+                    settings: RouteSettings(
+                      arguments: todos[index],
+                    ),
+                  ),
+                );
+              },
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class DetailScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final Todo todo = ModalRoute.of(context).settings.arguments;
+
+    // Use the Todo to create the UI.
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(todo.title),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          reverse: false,
+          padding: EdgeInsets.only(right: 10, left: 10),
+          children: <Widget>[
+            Text(
+              todo.description,
+              style: TextStyle(fontSize: 18, letterSpacing: 2, wordSpacing: 2),
+            ),
+          ],
+        ),
       ),
     );
   }
